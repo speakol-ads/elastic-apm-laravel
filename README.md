@@ -1,10 +1,10 @@
 # PHP Elastic APM for Laravel & Lumen
-Laravel package of the https://github.com/philkra/elastic-apm-php-agent library, automatically handling transactions and errors/exceptions. If using `Illuminate\Support\Facades\Auth` the user Id added to the context.
+Laravel package of the https://github.com/speakol-ads/elastic-apm-php-agent library, automatically handling transactions and errors/exceptions. If using `Illuminate\Support\Facades\Auth` the user Id added to the context.
 Tested with Laravel `5.6.*` and the philkra/elastic-apm-php-agent version `6.2.*`.
 
 ## Install
 ```
-composer require philkra/elastic-apm-laravel
+composer require speakol-ads/elastic-apm-laravel
 ```
 
 ## Middleware
