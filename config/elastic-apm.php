@@ -31,10 +31,13 @@ return [
         'secretToken'   => env('APM_SECRETTOKEN', null),
 
         // API version of the apm agent you connect to
-        'apmVersion'    => env('APM_APIVERSION', 'v1'),
+        'apmVersion'    => env('APM_APIVERSION', 'v2'),
 
         // Hostname of the system the agent is running on.
         'hostname'      => gethostname(),
+        
+        // the connection timeout in milliseconds
+        'timeout'       => env('APM_CONNECTION_TIMEOUT', 10 * 1000),
     ],
 
     'transactions' => [
