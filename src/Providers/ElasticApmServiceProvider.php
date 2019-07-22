@@ -25,6 +25,10 @@ class ElasticApmServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        function apm_catch(\Throwable $throwable) {
+            \ElasticApm::captureThrowable($throwable, [], request()->__apm__());
+        }
+
         if (class_exists('Illuminate\Foundation\Application', false)) {
             $this->publishes([
                 realpath($this->sourceConfigPath) => config_path('elastic-apm.php'),
