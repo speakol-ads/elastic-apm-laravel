@@ -1,6 +1,6 @@
 # PHP Elastic APM for Laravel & Lumen
 Laravel package of the https://github.com/speakol-ads/elastic-apm-php-agent library, automatically handling transactions and errors/exceptions. If using `Illuminate\Support\Facades\Auth` the user Id added to the context.
-Tested with Laravel `5.6.*` and the philkra/elastic-apm-php-agent version `6.2.*`.
+Tested with Laravel `5.8.*` and the philkra/elastic-apm-php-agent version `7.*`.
 
 ## Install
 ```
@@ -86,6 +86,7 @@ The following environment variables are supported in the default configuration:
 |APM_THRESHOLD      | Query threshold in milliseconds, defaults to `200`. If a query takes longer then 200ms, we enable the query log. Make sure you set `APM_QUERYLOG=auto`. |
 |APM_BACKTRACEDEPTH | Defaults to `25`. Depth of backtrace in query span. |
 |APM_RENDERSOURCE   | Defaults to `true`. Include source code in query span. |
+|APM_CONNECTION_TIMEOUT | Defaults to `10000` millisecond. |
 
 You may also publish the `elastic-apm.php` configuration file to change additional settings:
 
