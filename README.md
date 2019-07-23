@@ -54,7 +54,7 @@ pending
 In `app/Exceptions/Handler`, add the following to the `report` method:
 
 ```php
-apm_catch($exception);
+\ElasticApm::captureThrowable($exception, [], request()->__apm__());
 ```
 
 ### Lumen
